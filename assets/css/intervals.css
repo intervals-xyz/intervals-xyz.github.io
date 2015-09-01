@@ -221,6 +221,11 @@ h1.home-title {
 .alc {
   margin-bottom: 0 !important;
 }
+
+.alc em{
+  font-size: 13px;
+}
+
 .ro {
   padding: 30px;
 }
