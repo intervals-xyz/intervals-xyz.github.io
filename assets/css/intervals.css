@@ -3,7 +3,7 @@
 /* Home settings */
 
 .home{
-	background-color: #000000;
+	background-color: #151515;
 }
 .bgi{
   position: relative;
@@ -161,7 +161,8 @@ h1.home-title {
 
 .a-grid {
   margin-top: -25px;
-  height: 608px;
+  clear:both;
+  display: table;
 }
 .a-grid .e {
   position: relative;
@@ -177,6 +178,7 @@ h1.home-title {
   min-height: 1px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -247,7 +249,6 @@ h1.home-title {
   bottom: -25px;
   left: 0;
   overflow: hidden;
-  height: 670px;
 }
 
 .div-0 .sec-title {
@@ -264,6 +265,10 @@ h1.home-title {
   bottom: 25px;
   left: -25px;
   overflow: hidden;
+
+  background-position: center;
+  border-bottom: 10px solid #F8DE19;
+
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
 }
@@ -287,23 +292,8 @@ h1.home-title {
 }
 
 .h {
-  z-index: 4;
-  height: 400px;
-}
-.div-1 {
-  border-bottom: 10px solid #F8DE19;
-}
-
-.aoc .aob {
-  height: 400px;
-  background-position: center;
-}
-.aod {
-  background-position: top;
-}
-
-.h .div-0{
-	height: 450px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .h .title {
@@ -311,6 +301,9 @@ h1.home-title {
 	color: #FFF;
 }
 
+.buttom-padding {
+  padding-bottom: 20px;
+}
 /* End home sections */
 
 /* Footer */

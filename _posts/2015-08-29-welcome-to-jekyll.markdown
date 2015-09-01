@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Chet Faker"
 date:   2015-08-29 13:53:23
-description: "Primer post"
+description: "Welcome to Jekyll!"
 categories: jekyll update
 image: chetFaker.jpg
 ---
