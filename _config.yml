@@ -12,3 +12,8 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
+
+# Custom collections (e.g. artists, reviews, news)
+collections:
+  artists:
+    output: true
