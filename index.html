@@ -10,23 +10,21 @@ layout: default
     <div class="div-0"><div class="div-1"><div class="div-3"></div></div></div>
     
     {% for post in site.posts %}
-    <div class="sec-title">
-      <div class="sec-title-2">
-        <div class="a-capsule">
-          <div class="sec-title-2 bm20">
-            <div class="b-capsule">
-              <div class="rn cy rz alc aqr">
-                <img src="/assets/img/{{ post.image }}">
-                <div class="ro amz">
-                  <h4 class="alc">{{ post.title }}</h4>
-                  <p><em>{{ post.excerpt | strip_html | truncatewords: 40 }}</em></p>
+    <a class="darken">
+      <div class="sec-title">
+        <div class="sec-title-2">
+          <div class="a-capsule">
+            <div class="sec-title-2 bm20">
+              <div class="b-capsule">
+                <div class="rn cy rz alc aqr">
+                  <img src="/assets/img/{{ post.image }}">
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </a>
     {% endfor %}
   </div>
   
