@@ -1,14 +1,91 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}" />
 
+  <!-- Site Properities -->
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <link rel="stylesheet" href="{{ "/assets/css/normalize.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "/assets/css/intervals.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css' />
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/reset.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/site.css" | prepend: site.baseurl }}" />
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/container.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/grid.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/header.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/image.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/menu.css" | prepend: site.baseurl }}" />
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/divider.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/dropdown.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/segment.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/button.css" | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/list.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/icon.css" | prepend: site.baseurl }}"/>
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/sidebar.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/transition.css" | prepend: site.baseurl }}" />
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/card.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/reveal.css" | prepend: site.baseurl }}" />
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/dist/components/dimmer.css" | prepend: site.baseurl }}" />
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <style type="text/css">
+    .hidden.menu {
+      display: none;
+    }
+
+    .ui.inverted.vertical.masthead.center.aligned.segment {
+      background-image: url("{% if page.mainImage %} /assets/images/{{ page.mainImage }}{% else %}{{ "/assets/images/a1.jpg" }}{% endif %}");
+      background-repeat:no-repeat;
+      background-size:cover;
+      min-height: {% if page.mainImage %}{{ "500px" }}{% else %}{{ "0px" }}{% endif %};
+    }
+
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.menu .item,
+      .secondary.menu .menu {
+        display: none;
+      }
+      .secondary.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+    }
+
+  </style>
+
 </head>

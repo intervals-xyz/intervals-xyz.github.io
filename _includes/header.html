@@ -1,3 +1,37 @@
 <header>
+	<!-- Following Menu -->
+	<div class="ui borderless large top fixed hidden menu">
+	  <div class="ui container">
+	    <a href="/" class="header item">
+	        <img class="logo" src="/assets/images/logo.jpg" style="margin-right: 1em;">
+	        Intervals
+	    </a>
+	    {% if page.title %}
+	    <a class="item">{{ page.title }}</a>
+	    {% endif %}
+	  </div>
+	</div>
+
+	<!-- Sidebar Menu -->
+	<div class="ui vertical inverted sidebar menu">
+	  <a class="active item">Home</a>
+	</div>
+
+
+	<!-- Page Contents -->
+	  <div class="ui inverted vertical masthead center aligned segment">
+
+	    <div class="ui container">
+	      <div class="ui large secondary inverted menu">
+	        <a class="toc item">
+	          <i class="sidebar icon"></i>
+	        </a>
+	        <a href="/" class="header item">
+	            <img class="logo" src="/assets/images/logo.jpg" style="margin-right: 1em;">
+	            Intervals
+	        </a>
+	      </div>
+	    </div>
+	  </div>
 
 </header>
