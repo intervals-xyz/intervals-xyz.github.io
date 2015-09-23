@@ -43,6 +43,7 @@
     .ui.inverted.vertical.masthead.center.aligned.segment {
       background-image: url("{% if page.mainImage %} /assets/images/{{ page.mainImage }}{% else %}{{ "/assets/images/a1.jpg" }}{% endif %}");
       background-repeat:no-repeat;
+      background-position: center center;
       background-size:cover;
       min-height: {% if page.mainImage %}{{ "500px" }}{% else %}{{ "0px" }}{% endif %};
     }
